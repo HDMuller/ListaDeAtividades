@@ -1,21 +1,50 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
+defined('BASEPATH') or exit('No direct script access allowed');
+?>
+<!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
 	<meta charset="utf-8">
 	<title>Primeira Tarefa</title>
-
 </head>
+
 <body>
+	<div id="container">
+		<!-- <h1>Adicionar</h1>
 
-<div id="container">
-	<h1><?php echo 'Teste'; ?></h1>
+		
 
-	<div id="body">
-		<p><?php echo 'Teste conteudo'; ?></p>		
+		<label for="nome">Nome</label>
+		<input type="input" name="nome" /><br />
+
+		<label for="descricao">Descrição</label>
+		<textarea name="descricao"></textarea><br />
+
+		<label for="data">Data</label>
+		<input type="date" name="data" /><br />
+
+		<input type="submit" name="submit" value="Adicionar Tarefa" />
+
+		</form> -->
+
+
+		<h1>Listagem</h1>
+		<table>
+			<tr>
+				<th>Nome</th>
+				<th>Descrição</th>
+				<th>Data</th>
+			</tr>
+			<?php foreach ($tarefa as $row) : ?>
+				<tr>
+					<td><?php echo $row['nome']; ?></td>
+					<td><?php echo $row['descricao']; ?></td>
+					<td><?php echo $row['data_agenda']; ?></td>
+				</tr>
+			<?php endforeach; ?>
+		</table>
 	</div>
-</div>
-
 </body>
+
 </html>
