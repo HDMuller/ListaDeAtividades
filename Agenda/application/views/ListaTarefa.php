@@ -35,12 +35,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<th>Nome</th>
 				<th>Descrição</th>
 				<th>Data</th>
+				<th>Feito?</th>
 			</tr>
 			<?php foreach ($tarefa as $row) : ?>
 				<tr>
 					<td><?php echo $row['nome']; ?></td>
 					<td><?php echo $row['descricao']; ?></td>
 					<td><?php echo $row['data_agenda']; ?></td>
+					<td><?php echo "<a href='".$row['codigo']."'>Feito</a>"; ?></td>
 				</tr>
 			<?php endforeach; ?>
 		</table>
